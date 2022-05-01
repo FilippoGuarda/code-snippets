@@ -35,7 +35,7 @@ std::vector<int> get_coords(){
     return coords;
 }
 
-matrix<bool> update_matrix(matrix<bool> m, std::vector<int> coord, int radius){
+matrix<bool> update_matrix(matrix<bool> m, std::vector<int> coord){
     
     /* -- variables
     - Matrix m: original matrix to modify with illumination
@@ -61,16 +61,12 @@ matrix<bool> update_matrix(matrix<bool> m, std::vector<int> coord, int radius){
             distance = 0;
             direction = atan2((y-j),(x-i));
             modulo = sqrt((y-j)^2 + (x-i)^2);
-            if(modulo > radius){
-                n(i,j) = 0;
-                continue;
-            }
             //walk along direction until the i,j point is reached or a zero tile
             while(distance < modulo){
                 distance += 0.25;
                 x1 = x + distance*cos(direction);
                 y1 = y + distance*sin(direction);
-                if(m(x1, y1) == 0){
+                if(m(, y1) == 0){
                     n(i,j) = 0;
                     break;
                 }
