@@ -1,2 +1,8 @@
-/.vscode
-/reward_calculator
+#ignore all 
+*
+
+#unignore all .cpp and .py extensions
+
+!*.cpp
+!*.py
+!/README

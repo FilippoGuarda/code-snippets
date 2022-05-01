@@ -1,0 +1,4 @@
+Various attempts at creating simple irradiation algorithm both with c++ and with python.
+
+The irradiation algorithm must check if every square in a grid has direct line of sight with a light source and set it's relative value to true or false
+according to if it is being irradiated or not. 
